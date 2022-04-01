@@ -9,12 +9,10 @@
 <body>
 	<form action="">
 		<h2>Username</h2>
-		<input type="text" name="username"/>
-<br/>
-<h2>password</h2>
-<input type="password" name="password" />
-<br/>
-<input type="submit" value="login"/>
+		<input type="text" name="username" /> <br />
+		<h2>password</h2>
+		<input type="password" name="password" /> <br /> <input type="submit"
+			value="login" />
 	</form>
 </body>
 </html>
