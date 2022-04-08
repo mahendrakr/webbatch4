@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/reg.do" method="post" class="reg-form">
+<form action="reg.do" method="post" class="reg-form">
   <div class="mb-3">
     <label for="exampleInputName" class="form-label">Name</label>
     <input type="text" class="form-control" name="fname" >

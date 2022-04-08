@@ -5,6 +5,8 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Enumeration;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +19,7 @@ import com.jdbc.util.JdbcUtil;
 /**
  * Servlet implementation class RegServlet
  */
-@WebServlet("/reg.do")
+@WebServlet(urlPatterns="/reg.do",loadOnStartup=1)
 public class RegServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -50,6 +52,20 @@ public class RegServlet extends HttpServlet {
 				System.out.println(gender);
 				
 				System.out.println(time);
+				//Case2 : You can access the parameters name and values as a map.
+				Map<String, String[]> map = request.getParameterMap();
+				for(Map.Entry<String, String[]> e:map.entrySet()) {
+					
+					for(String v:e.getValue()) {
+						System.out.println(e.getKey()+ " " + v);
+					}
+				}
+				System.out.println("*****************");
+				//Case 3: To access only request parameters 
+				Enumeration<String> enm = request.getParameterNames();
+				while(enm.hasMoreElements()) {
+					System.out.println(enm.nextElement());
+				}
 				//insert into database
 				Connection con = JdbcUtil.getMySQLConnection();
 				PreparedStatement ps=null;

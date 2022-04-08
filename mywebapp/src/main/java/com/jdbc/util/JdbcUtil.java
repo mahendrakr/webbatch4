@@ -21,7 +21,7 @@ public class JdbcUtil {
 		 String url="jdbc:mysql://localhost:3306/mydb";
 		 Connection con=null;
 		 try {
-		con=DriverManager.getConnection(url, "root", "Kavya@15") ;
+		con=DriverManager.getConnection(url, "root", "myhandsomepapa@0930") ;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
