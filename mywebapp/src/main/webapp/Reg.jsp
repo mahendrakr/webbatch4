@@ -9,28 +9,28 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="reg.do" method="post" class="reg-form">
+<form action="/reg.do" method="post" class="reg-form">
   <div class="mb-3">
     <label for="exampleInputName" class="form-label">Name</label>
-    <input type="text" class="form-control">
+    <input type="text" class="form-control" name="fname" >
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email</label>
-    <input type="email" class="form-control">
+    <label for="exampleInputEmail1" class="form-label" >Email</label>
+    <input type="email" class="form-control" name="uemail">
   </div>
   <div class="mb-3">
     <label for="exampleInputPhone" class="form-label">Phone number</label>
-    <input type="number" class="form-control">
+    <input type="number" class="form-control" name="phnumber">
   </div>
   <div class="mb-3"> <label for="exampleInputName" class="form-label">Gender</label>
   <div class="form-check">
-  <input class="form-check-input" type="radio" name="gender">
+  <input class="form-check-input" type="radio" name="gender" value="male">
   <label class="form-check-label" for="flexRadioDefault1">
    Male 
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="gender">
+  <input class="form-check-input" type="radio" name="gender" value="female">
   <label class="form-check-label" for="flexRadioDefault1">
    Female
   </label>
