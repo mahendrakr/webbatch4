@@ -8,7 +8,10 @@ import java.sql.SQLException;
 import java.util.Enumeration;
 import java.util.Map;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,9 +22,13 @@ import com.jdbc.util.JdbcUtil;
 /**
  * Servlet implementation class RegServlet
  */
-@WebServlet(urlPatterns="/reg.do",loadOnStartup=1)
+@WebServlet(urlPatterns="/reg.do",loadOnStartup=1,initParams = {
+		@WebInitParam(name="website",value="www.sirt.com"),
+		@WebInitParam(name="phone",value="8602546990")
+} )
 public class RegServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private ServletConfig config;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -30,12 +37,28 @@ public class RegServlet extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
+    public void init(ServletConfig config) {
+    	this.config=config;
+    String website = config.getInitParameter("website");	
+    	System.out.println(website);
+    	String phone = config.getInitParameter("phone");
+        System.out.println(phone);
+        }
 
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String website = config.getInitParameter("website");	
+    	System.out.println(website);
+    	String phone1 = config.getInitParameter("phone");
+        System.out.println(phone1);
+        System.out.println("**********************************");
+        System.out.println("ServletContext Object");
+        ServletContext context = config.getServletContext();
+        System.out.println("Website : "+context.getInitParameter("website"));
+        System.out.println("ContextPath : "+context.getContextPath());
 		// Collect the data
 				String name = request.getParameter("fname");
 				String email = request.getParameter("uemail");

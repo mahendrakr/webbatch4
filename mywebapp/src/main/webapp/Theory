@@ -9,3 +9,39 @@ http://localhost:8080/reg.do   (request will be submitted to mywebapp)
 Case:4 <form action="https://www.facebook.com"> (request will be submitted to facebook.com)
 
 Servlet instance creations
+Parameters : 
+1.ServletRequest 
+2.ServletConfig:
+Step1:Get ServletConfig object and then you can access (config.getInitParameter())
+3.ServletContext:
+Step1:Get ServletContext object 
+
+Syllabus:
+Servlet instance creations{Parameters}
+Servlet Lifecycle {End mein}
+Request Dispatcher {forward(),include()}
+Filter 
+Servlet Chaining & Filter Chaining
+Exploring HttpServletRequest & HttpServletResponse
+Session Management{Exploring Http Session}
+Listener
+Servlet Scope
+Java Mail API
+MVC(Model View Controller Design Pattern)
+Upload & Download
+
+JSP Syllabus: 
+JSP introduction 
+JSP Lifecycle
+JSP implicit objects
+JSP scripting elements
+JSP directives
+JSP Standard actions
+JSP Scopes
+EL expression
+JSTL 
+
+
+
+
+
