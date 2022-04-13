@@ -41,7 +41,23 @@ JSP Scopes
 EL expression
 JSTL 
 
+Request Dispatcher {forward(),include()}: 
+It is an interface available in javax.servlet package.
+It has two methods :
+1.forward()
+2.include()
 
+Question: Difference between forward() and include()?
+
+forward():forward() method is used to forward the request from -
+          Servlet to HTML
+          Servlet to JSP
+          Servlet to Servlet
+          JSP to HTML
+          JSP to Servlet
+          JSP to JSP
+          
+include():         
 
 
 

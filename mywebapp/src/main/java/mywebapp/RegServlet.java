@@ -22,7 +22,7 @@ import com.jdbc.util.JdbcUtil;
 /**
  * Servlet implementation class RegServlet
  */
-@WebServlet(urlPatterns="/reg.do",loadOnStartup=1,initParams = {
+@WebServlet(urlPatterns="/reg.do",initParams = {
 		@WebInitParam(name="website",value="www.sirt.com"),
 		@WebInitParam(name="phone",value="8602546990")
 } )
