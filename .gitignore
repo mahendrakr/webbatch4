@@ -3,7 +3,7 @@
 Servers/*
 # Log file
 *.log
-
+mywebapp/build/*
 # BlueJ files
 *.ctxt
 
